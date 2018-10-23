@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMesaaux.a  CMakeFiles/Mesaaux.dir/teapot.c.o CMakeFiles/Mesaaux.dir/shapes.c.o CMakeFiles/Mesaaux.dir/vect3d.c.o CMakeFiles/Mesaaux.dir/xxform.c.o
+/usr/bin/ranlib libMesaaux.a

@@ -1,0 +1,1 @@
+/home/simon/Documents/Recherche/RISCV-toolchain/riscv_float/bin/riscv64-unknown-elf-gcc  -O3 -static -march=rv64imf -DSMALL_DATASET -DDATA_TYPE_IS_INT   CMakeFiles/osdemo.dir/osdemo.c.o  -o bin/osdemo -lm ../src-aux/libMesaaux.a ../src-glu/libMesaGLU.a ../src/libMesaGL.a -lm -lm 

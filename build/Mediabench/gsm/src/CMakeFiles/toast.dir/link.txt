@@ -1,0 +1,1 @@
+/home/simon/Documents/Recherche/RISCV-toolchain/riscv_float/bin/riscv64-unknown-elf-gcc  -O3 -static -march=rv64imf -DSMALL_DATASET -DDATA_TYPE_IS_INT   CMakeFiles/toast.dir/toast.c.o CMakeFiles/toast.dir/toast_lin.c.o CMakeFiles/toast.dir/toast_ulaw.c.o CMakeFiles/toast.dir/toast_alaw.c.o CMakeFiles/toast.dir/toast_audio.c.o  -o bin/toast -lm libmb_gsm.a -lm 

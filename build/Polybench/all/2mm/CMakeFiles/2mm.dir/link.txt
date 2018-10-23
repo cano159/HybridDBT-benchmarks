@@ -1,0 +1,1 @@
+/home/simon/Documents/Recherche/RISCV-toolchain/riscv_float/bin/riscv64-unknown-elf-gcc  -O3 -static -march=rv64imf -DSMALL_DATASET -DDATA_TYPE_IS_INT   CMakeFiles/2mm.dir/2mm.c.o CMakeFiles/2mm.dir/__/__/utilities/polybench.c.o  -o bin/2mm -lm 

@@ -1,0 +1,1 @@
+/home/simon/Documents/Recherche/RISCV-toolchain/riscv_float/bin/riscv64-unknown-elf-gcc  -O3 -static -march=rv64imf -DSMALL_DATASET -DDATA_TYPE_IS_INT   CMakeFiles/jpegtran.dir/jpegtran.c.o CMakeFiles/jpegtran.dir/rdswitch.c.o CMakeFiles/jpegtran.dir/cdjpeg.c.o  -o bin/jpegtran -lm libjpeg.a -lm 

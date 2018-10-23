@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../Mediabench/mesa/include/GL/gl.h
+gl_mangle.h
+../Mediabench/mesa/include/GL/gl_mangle.h
+
+../Mediabench/mesa/include/GL/gl_mangle.h
+
+../Mediabench/mesa/include/GL/glu.h
+glu_mangle.h
+../Mediabench/mesa/include/GL/glu_mangle.h
+GL/gl.h
+../Mediabench/mesa/include/GL/GL/gl.h
+
+../Mediabench/mesa/include/GL/glu_mangle.h
+
+../Mediabench/mesa/include/GL/osmesa.h
+GL/gl.h
+../Mediabench/mesa/include/GL/GL/gl.h
+
+/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/demos/texgen.c
+GL/gl.h
+-
+GL/glu.h
+-
+stdlib.h
+-
+stdio.h
+-
+GL/osmesa.h
+/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/demos/GL/osmesa.h
+

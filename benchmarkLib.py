@@ -1,4 +1,3 @@
-
 #! /usr/bin/python
 
 import sys, subprocess, os, shutil, random, shlex, time, re, distutils.spawn
@@ -194,21 +193,13 @@ def scanPolybench(benchmarks):
 
 def startsAllRunsGem5Big(runsToDo):
 
-	#We check for gem5 executable and if we did not find them, we exit
-	if GEM5 == "":
-		if distutils.spawn.find_executable("gem5"):
-			GEM5 = "gem5"
-		else:
-			print "Can't start gem5 benchmarks..."
-			return
-
 	for (name, place, benchmark, args, inputs, outputs) in runsToDo:
 
 		#location of gem5 script
 		proc = os.path.dirname(os.path.realpath(__file__)) + "/scripts/big.py"
 
 		nameStat = getTempFileName()
-		runString = GEM5 + " --stats-file=" + nameStat + " " + proc + " --caches --l2cache --l1d_size=8192 --l1i_size=8192 --l2_size=1048576 --l1d_assoc=4 --l1i_assoc=4 --l2_assoc=8 --cpu-clock=700MHz -c " + benchmark
+		runString = "gem5.opt " + " --stats-file=" + nameStat + " " + proc + " --caches --l2cache --l1d_size=8192 --l1i_size=8192 --l2_size=1048576 --l1d_assoc=4 --l1i_assoc=4 --l2_assoc=8 --cpu-clock=700MHz -c " + benchmark
 
 		if args != "":
 			runString += " --options=\"" + args + "\" " 
@@ -633,16 +624,39 @@ def runBIG(runsToDo):
 
 #########
 
-def createPlots():
-	
-
 
 #["adpcm", "jpeg", "epic", "g721", "gsm", "mpeg2"]
 #["2mm","3mm", "adi", "atax", "bicg", "cholesky", "correlation", "covariance", "deriche", "doitgen", "durbin", "fdtd-2d", "floyd-warshall", "gemm", "gemver", "gesummv", "gramschmidt", "heat-3d", "jacobi-1d", "jacobi-2d", "lu", "ludcmp", "mvt", "nussinov", "seidel-2d", "symm", "syr2k", "syrk", "trisolv", "trmm"]
 #runsToDo = scanMediabench(["adpcm", "jpeg", "epic", "g721", "gsm", "mpeg2"])
-runsToDo = scanPolybench(["2mm","3mm"])#, "atax", "bicg", "correlation", "covariance", "deriche", "doitgen", "durbin", "floyd-warshall", "gemm", "gemver", "gesummv", "gramschmidt", "heat-3d", "jacobi-1d", "jacobi-2d", "lu", "ludcmp", "nussinov", "seidel-2d", "syr2k", "syrk", "trisolv", "trmm"]) + scanMediabench(["adpcm", "jpeg", "epic", "g721", "gsm"])
+#runsToDo = scanPolybench(["2mm","3mm"])#, "atax", "bicg", "correlation", "covariance", "deriche", "doitgen", "durbin", "floyd-warshall", "gemm", "gemver", "gesummv", "gramschmidt", "heat-3d", "jacobi-1d", "jacobi-2d", "lu", "ludcmp", "nussinov", "seidel-2d", "syr2k", "syrk", "trisolv", "trmm"]) + scanMediabench(["adpcm", "jpeg", "epic", "g721", "gsm"])
+
+runsToDo = []
+polybenchApps = ["2mm","3mm", "atax", "bicg", "correlation", "covariance", "deriche", "doitgen", "durbin", "floyd-warshall", "gemm", "gemver", "gesummv", "gramschmidt", "heat-3d", "jacobi-1d", "jacobi-2d", "lu", "ludcmp", "nussinov", "seidel-2d", "syr2k", "syrk", "trisolv", "trmm"]
+mediabenchApps = ["adpcm", "jpeg", "epic", "g721", "gsm"]
 
 #runsToDo = scanMediabench(["adpcm", "jpeg", "epic", "g721", "gsm"])
+
+if len(sys.argv) > 1:
+	if sys.argv[1] in ["help", "-h", "--help"]:
+		print "Usage: ./benchmarkLib.py [help/-h/--help] [apps]"
+		print "Where apps is a list of application names from Polybench or Mediabench"
+		print "Accepted Polybench apps are:"
+		for oneApp in polybenchApps:
+			print oneApp + " ",
+		print "\nAccepted Mediabenchd apps are:"
+		for oneApp in mediabenchApps:
+			print oneApp + " ",
+		exit()
+	else:
+		for oneApp in sys.argv[1:]:
+			if oneApp in polybenchApps:
+				runsToDo = runsToDo + scanPolybench([oneApp])
+			elif oneApp in mediabenchApps:
+				runsToDo = runsToDo + scanMediabench([oneApp])
+			else:
+				print "Unknown application '" + oneApp + "'. Ignoring it."
+else:
+	runsToDo = scanPolybench(polybenchApps) + scanMediabench(mediabenchApps)
 
 checkConfig()
 

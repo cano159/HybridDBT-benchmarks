@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/ansi2knr.c
+config.h
+-
+stdio.h
+-
+ctype.h
+-
+string.h
+-
+strings.h
+-
+strings.h
+-
+string.h
+-
+stdlib.h
+-
+malloc.h
+-
+

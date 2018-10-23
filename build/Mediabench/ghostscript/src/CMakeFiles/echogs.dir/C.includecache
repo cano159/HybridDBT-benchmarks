@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/ghostscript/src/echogs.c
+stdio.h
+-
+sys/types.h
+-
+ctype.h
+-
+string.h
+-
+time.h
+-
+stdlib.h
+-
+

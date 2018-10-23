@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/adpcm/src/adpcm.c
+adpcm.h
+/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/adpcm/src/adpcm.h
+stdio.h
+-
+
+/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/adpcm/src/adpcm.h
+
+/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/adpcm/src/rawdaudio.c
+adpcm.h
+/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/adpcm/src/adpcm.h
+stdio.h
+-
+
