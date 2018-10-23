@@ -53,6 +53,7 @@ Add the build/bin/ folder in your PATH, the benchmark script needs to see it.
 ### GEM5 Simulator
 
 One experiment alsow use GEM5 simulator. To download the sources and build them using scons run the following commands:
+
 	$ git clone https://gem5.googlesource.com/public/gem5
 	$ scons build/RISCV/gem5.opt 
 
@@ -64,6 +65,8 @@ The repository also contains a python script for running all experiments and wri
 
 	$ ./benchmarkLib.py 2mm 3mm
 
-The list of accepted application is:
+The list of accepted application can be obtained running:
+
+	$ ./benchmarkLib.py -h
 
 
