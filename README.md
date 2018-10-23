@@ -69,4 +69,8 @@ The list of accepted application can be obtained running:
 
 	$ ./benchmarkLib.py -h
 
+### TODO List
 
+	- Using Python to draw the different histograms
+	- Factorizing code in the Python script
+	- Adding a better management of threads created by the script. It currently creates all the thread for one experiments and waits their completion to start the other ones. It should always start a limited number of thread and start the new experiments before the previous one is finisched.
