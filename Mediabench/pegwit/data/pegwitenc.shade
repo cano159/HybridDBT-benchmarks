@@ -1,0 +1,9 @@
+-a
+-e my.pub pgptest.plain pegwit.enc
+Arg was ../../build/pegwit/src/bin/pegwit
+Arg was -e
+Arg was my.pub
+Arg was pgptest.plain
+Arg was pegwit.enc
+There is 5 arguments passed to simulator
+In default part of switch opcode, instr 0 is not handled yet(35000)
