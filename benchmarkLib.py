@@ -80,6 +80,7 @@ def startRun(command, inFile, name):
 	out = file(nameOut, "w")
 
 	process = subprocess.Popen(command, stdin = inFile, stdout = out, stderr = err, shell = True)
+	#process = subprocess.Popen("oarsub -l core=1,walltime=03:50:00 " + command, stdin = inFile, stdout = out, stderr = err, shell = True)
 
 	runs.append((name, command, nameOut, nameErr, out, err, process))
 
@@ -174,7 +175,7 @@ def scanPolybench(benchmarks):
 	localResult = []
 	for oneBenchmark in benchmarks:
 
-		localResult.append((oneBenchmark, "./", "./build/Polybench/all/" + oneBenchmark + "/bin/" + oneBenchmark, "", "", ""))
+		localResult.append((oneBenchmark, "./", "./build/Polybench_modif/all/" + oneBenchmark + "/bin/" + oneBenchmark, "", "", ""))
 
 	return localResult;
 
@@ -622,6 +623,110 @@ def runBIG(runsToDo):
 
 	printResult(resultFile, resultList)
 
+##########
+
+def runDBTNoCM(runsToDo):
+
+	resultFile = "results_dbt_noCM.csv"
+
+	#We check if the result file already exists
+	if os.path.exists(resultFile):
+		return
+
+	startsAllRunsDBT(runsToDo, [4], [2], "-countermeasure 0")
+
+	results[resultFile] = []
+	resultList = results	[resultFile]
+
+	while	(len(runs) > 0):
+		(name, command, nameOut, nameErr, returnCode) = wait()
+
+		print "command " + command +" exited with code "+ str(returnCode)
+		resultList.append(parseResults(nameOut, name))
+
+		os.remove(nameOut)
+		os.remove(nameErr)
+
+	printResult(resultFile, resultList)
+
+##########
+
+def runDBTCM3(runsToDo):
+
+	resultFile = "results_dbt_CM3.csv"
+
+	#We check if the result file already exists
+	if os.path.exists(resultFile):
+		return
+
+	startsAllRunsDBT(runsToDo, [4], [2], "-countermeasure 3")
+
+	results[resultFile] = []
+	resultList = results	[resultFile]
+
+	while	(len(runs) > 0):
+		(name, command, nameOut, nameErr, returnCode) = wait()
+
+		print "command " + command +" exited with code "+ str(returnCode)
+		resultList.append(parseResults(nameOut, name))
+
+		os.remove(nameOut)
+		os.remove(nameErr)
+
+	printResult(resultFile, resultList)
+
+##########
+
+def runDBTCM7(runsToDo):
+
+	resultFile = "results_dbt_CM7.csv"
+
+	#We check if the result file already exists
+	if os.path.exists(resultFile):
+		return
+
+	startsAllRunsDBT(runsToDo, [4], [2], "-countermeasure 7")
+
+	results[resultFile] = []
+	resultList = results	[resultFile]
+
+	while	(len(runs) > 0):
+		(name, command, nameOut, nameErr, returnCode) = wait()
+
+		print "command " + command +" exited with code "+ str(returnCode)
+		resultList.append(parseResults(nameOut, name))
+
+		os.remove(nameOut)
+		os.remove(nameErr)
+
+	printResult(resultFile, resultList)
+
+##########
+
+def runDBTCM11(runsToDo):
+
+	resultFile = "results_dbt_CM11.csv"
+
+	#We check if the result file already exists
+	if os.path.exists(resultFile):
+		return
+
+	startsAllRunsDBT(runsToDo, [2], [2], "-countermeasure 11")
+
+	results[resultFile] = []
+	resultList = results	[resultFile]
+
+	while	(len(runs) > 0):
+		(name, command, nameOut, nameErr, returnCode) = wait()
+
+		print "command " + command +" exited with code "+ str(returnCode)
+		resultList.append(parseResults(nameOut, name))
+
+		os.remove(nameOut)
+		os.remove(nameErr)
+
+	printResult(resultFile, resultList)
+
 #########
 
 
@@ -631,8 +736,10 @@ def runBIG(runsToDo):
 #runsToDo = scanPolybench(["2mm","3mm"])#, "atax", "bicg", "correlation", "covariance", "deriche", "doitgen", "durbin", "floyd-warshall", "gemm", "gemver", "gesummv", "gramschmidt", "heat-3d", "jacobi-1d", "jacobi-2d", "lu", "ludcmp", "nussinov", "seidel-2d", "syr2k", "syrk", "trisolv", "trmm"]) + scanMediabench(["adpcm", "jpeg", "epic", "g721", "gsm"])
 
 runsToDo = []
-polybenchApps = ["2mm","3mm", "atax", "bicg", "correlation", "covariance", "deriche", "doitgen", "durbin", "floyd-warshall", "gemm", "gemver", "gesummv", "gramschmidt", "heat-3d", "jacobi-1d", "jacobi-2d", "lu", "ludcmp", "nussinov", "seidel-2d", "syr2k", "syrk", "trisolv", "trmm"]
-mediabenchApps = ["adpcm", "jpeg", "epic", "g721", "gsm"]
+#polybenchApps = ["2mm","3mm", "atax", "bicg", "correlation", "covariance", "deriche", "doitgen", "durbin", "floyd-warshall", "gemm", "gemver", "gesummv", "gramschmidt", "heat-3d", "jacobi-1d", "jacobi-2d", "lu", "ludcmp", "nussinov", "seidel-2d", "syr2k", "syrk", "trisolv", "trmm"]
+polybenchApps = ["2mm", "atax", "bicg", "deriche", "doitgen", "floyd-warshall", "gemm", "gemver", "gesummv", "gramschmidt", "jacobi-1d", "jacobi-2d", "ludcmp", "nussinov", "seidel-2d", "syr2k", "syrk", "trisolv", "trmm"]
+
+mediabenchApps = []#"adpcm", "jpeg", "epic", "g721", "gsm"]
 
 #runsToDo = scanMediabench(["adpcm", "jpeg", "epic", "g721", "gsm"])
 
@@ -660,20 +767,24 @@ else:
 
 checkConfig()
 
+runDBTNoCM(runsToDo)
+runDBTCM3(runsToDo)
+runDBTCM7(runsToDo)
+runDBTCM11(runsToDo)
 
-runDBTPerf(runsToDo)
-runDBTnoSpec(runsToDo)
-runLittle(runsToDo)
-runDBTc0(runsToDo)
-runDBTc9(runsToDo)
-runDBTc13(runsToDo)
-runDBTsw(runsToDo)
-runDBTO0(runsToDo)
-runDBTO1(runsToDo)
-runDBTnospec9(runsToDo)
-runDBTreconf1(runsToDo)
-runDBTreconf2(runsToDo)
-runBIG(runsToDo)
+#runDBTPerf(runsToDo)
+#runDBTnoSpec(runsToDo)
+#runLittle(runsToDo)
+#runDBTc0(runsToDo)
+#runDBTc9(runsToDo)
+#runDBTc13(runsToDo)
+#runDBTsw(runsToDo)
+#runDBTO0(runsToDo)
+#runDBTO1(runsToDo)
+#runDBTnospec9(runsToDo)
+#runDBTreconf1(runsToDo)
+#runDBTreconf2(runsToDo)
+#runBIG(runsToDo)
 
 # List of all experiments that have to be run 
 #
