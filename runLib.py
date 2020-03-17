@@ -1,6 +1,6 @@
 #! /usr/bin/python
 
-import sys, subprocess, os, shutil, random, shlex, time, re, distutils.spawn, json
+import sys, subprocess, os, shutil, random, shlex, time, re, distutils.spawn
 
 BOOM_SIM=""
 BOOM_PK=""
@@ -8,8 +8,7 @@ ROCKET_SIM=""
 ROCKET_PK=""
 GEM5=""
 
-QEMU = "/opt/riscv/bin/qemu-riscv64"
-QEMU_LD = "LD_LIBRARY_PATH=/home/simon/Documents/Recherche/HybridDBT/build "
+
 runs = []
 tempFiles = []
 results = {}
@@ -45,7 +44,7 @@ def checkConfig():
 
 def getTempFileName():
 	random.seed()
-	tempFileName = "/tmp/tempFile" + hex(random.randint(0, 4000000000000000000000000))[2:]
+	tempFileName = "/temp_dd/igrida-fs1/srokicki/tmp/tempFile" + hex(random.randint(0, 4000000000000000000000000))[2:]
 	
 	if os.path.exists(tempFileName):
 		return getTempFileName()
@@ -76,44 +75,61 @@ def getRunTime(process):
 def startRun(command, inFile, name):
 	nameErr = getTempFileName()
 	nameOut = getTempFileName()
+	nameOutOar = getTempFileName()
+	nameScript = getTempFileName() + ".sh"
 
+	script = file(nameScript, "w")
 	err = file(nameErr, "w")
+	outOar = file(nameOutOar, "w")
 	out = file(nameOut, "w")
+	script.write(command + "\n")
+	subprocess.check_call(['chmod', 'u+x', nameScript])
 
-	process = subprocess.Popen(command, stdin = inFile, stdout = out, stderr = err, shell = True)
+	#process = subprocess.Popen(command, stdin = inFile, stdout = out, stderr = err, shell = True)
+	process = subprocess.check_call("oarsub -l core=1,walltime=03:50:00 -O " + nameOut + " " + nameScript, stdin = inFile, stdout = outOar, stderr = err, shell = True)
+	print "oarsub -l core=1,walltime=03:50:00 -O " + nameOut + " " + nameScript
 
-	runs.append((name, command, nameOut, nameErr, out, err, process))
+	outFile = open(nameOutOar, "r")
+	for oneLine in outFile:
+		print oneLine		
+		if len(oneLine.split('=')) == 2 and oneLine.split('=')[0] == "OAR_JOB_ID":	
+			oarProcess = oneLine.split('=')[1][:-1]
 
-def startRunOAR(command, inFile, name):
-	nameErr = getTempFileName()
-	nameOut = getTempFileName()
 
-	process = subprocess.check_output(["oarsub", "-l", "core=1,walltime=01:00:00", "--stdout="+nameOut, "--stdout="+nameErr, '"' + command + ' < ' + inFile + '"'])
-
-	runs.append((name, command, nameOut, nameErr, out, err, process))
-
+	runs.append((name, command, nameOut, nameErr, out, err, oarProcess))
 
 #########
 
 def wait():
-	while True:	
+	while True:
+		nameOut = getTempFileName()
+		out = file(nameOut, "w")
+		process = subprocess.check_call("oarstat -u srokicki", stdout = out, shell = True)
+		
+		outFile = open(nameOut, "r")
+		processAlive = []
+		processAlive.append("0");
+		for oneLine in outFile:
+			while "  " in oneLine:
+				oneLine = oneLine.replace("  ", " ")
+
+			if len(oneLine.split(' '))>2 and oneLine.split(' ')[2] == "srokicki":
+				processAlive.append(oneLine.split(' ')[0]);
+
+
+		print processAlive
+		
 		for (name, command, nameOut, nameErr, out, err, process) in runs:
+			print process
 			#getRunTime(process)
-			if process.poll() != None:
+			if process not in processAlive:
 				out.close()
 				err.close()
 				runs.remove((name, command, nameOut, nameErr, out, err, process))
-				return (name, command, nameOut, nameErr, process.returncode)
-		time.sleep(1)
+				return (name, command, nameOut, nameErr, process)
 
-def waitOAR():
-	while True:
-		aliveRuns = json.loads(subprocess.check_output(["oarstat", "-u", "srokicki", "-J"]))
-		for (name, command, nameOut, nameErr, out, err, process) in runs:
-			if not(process in aliveRuns):
-				runs.remove((name, command, nameOut, nameErr, out, err, process))
-				return (name, command, nameOut, nameErr, process.returncode)
-		time.sleep(10)
+
+		time.sleep(20)
 
 #########
 
@@ -193,27 +209,22 @@ def scanPolybench(benchmarks):
 	localResult = []
 	for oneBenchmark in benchmarks:
 
-		localResult.append((oneBenchmark, "./", "./build/Polybench_modif/all/" + oneBenchmark + "/bin/" + oneBenchmark, "", "", ""))
+		localResult.append((oneBenchmark, "./", "/temp_dd/igrida-fs1/srokicki/HybridDBT-benchmarks/build/Polybench/all/" + oneBenchmark + "/bin/" + oneBenchmark, "", "", ""))
 
 	return localResult;
 
-#########
-
-def scanSpec(benchmarks):
+def scanSpec():
 	localResult = []
-	for oneBenchmark in benchmarks:
-		runFile = open("./Spec/" + oneBenchmark + "/run.sh", "r")
-		binaryFile = ""
-		args = ""
-		for oneLine in runFile:
-			if (oneLine.split(" ")[0] == "qemu-riscv64"):
-				binaryFile = oneLine.split(" ")[1];
-				for oneArg in oneLine.split(" ")[2:]:
-					args = args + " " + oneArg
-				break
+	localResult.append(("perlbench", "/temp_dd/igrida-fs1/srokicki/Speckle/build/overlay/intspeed/600.perlbench_s/", "./perlbench_s_base.riscv-64", "-I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1", "", ""))
+	localResult.append(("mcf", "/temp_dd/igrida-fs1/srokicki/Speckle/build/overlay/intspeed/605.mcf_s/", "./mcf_s_base.riscv-64", "inp.in", "", ""))
+	#localResult.append(("omnetpp", "/temp_dd/igrida-fs1/srokicki/Speckle/build/overlay/intspeed/620.omnetpp_s/", "./omnetpp_s_base.riscv-64", "-c General -r 0", "", ""))
+	#localResult.append(("xalancbmk", "/temp_dd/igrida-fs1/srokicki/Speckle/build/overlay/intspeed/623.xalancbmk_s/", "./xalancbmk_s_base.riscv-64", "-v t5.xml xalanc.xsl", "", ""))
+	#localResult.append(("x264", "/temp_dd/igrida-fs1/srokicki/Speckle/build/overlay/intspeed/625.x264_s/", "./x264_s_base.riscv-64", "--pass 1 --stats x264_stats.log --bitrate 1000 --frames 1000 -o BuckBunny_New.264 BuckBunny.yuv 1280x720", "", ""))
+	#localResult.append(("deepsjeng", "/temp_dd/igrida-fs1/srokicki/Speckle/build/overlay/intspeed/631.deepsjeng_s/", "./deepsjeng_s_base.riscv-64", "ref.txt", "", ""))
+	#localResult.append(("leela", "/temp_dd/igrida-fs1/srokicki/Speckle/build/overlay/intspeed/641.leela_s/", "./leela_s_base.riscv-64", "ref.sgf", "", ""))
+	#localResult.append(("exchange2", "/temp_dd/igrida-fs1/srokicki/Speckle/build/overlay/intspeed/648.exchange2_s/", "./exchange2_s_base.riscv-64", "6", "", ""))
+	#localResult.append(("xz", "/temp_dd/igrida-fs1/srokicki/Speckle/build/overlay/intspeed/657.xz_s/", "./xz_s_base.riscv-64", "cpu2006docs.tar.xz 6643 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1036078272 1111795472 4", "", ""))
 
-		localResult.append((oneBenchmark, "./", "./Spec/" + oneBenchmark + "/" + binaryFile, args, "", ""))
-		print localResult[-1]
 	return localResult
 
 ######################################################################################################################################################
@@ -228,69 +239,6 @@ def scanSpec(benchmarks):
 ##	startsAllRunsSimRISCV(runsToDo)		Executes all applications on the RISC-V pipelined simulator
 ##
 ######################################################################################################################################################
-
-def startsAllRunsGem5Big(runsToDo):
-
-	for (name, place, benchmark, args, inputs, outputs) in runsToDo:
-
-		#location of gem5 script
-		proc = os.path.dirname(os.path.realpath(__file__)) + "/scripts/big.py"
-
-		nameStat = getTempFileName()
-		runString = "gem5.opt " + " --stats-file=" + nameStat + " " + proc + " --caches --l2cache --l1d_size=8192 --l1i_size=8192 --l2_size=1048576 --l1d_assoc=4 --l1i_assoc=4 --l2_assoc=8 --cpu-clock=700MHz -c " + benchmark
-
-		if args != "":
-			runString += " --options=\"" + args + "\" " 
-
-		if inputs != "":
-			runString += " -i" + inputs + " " 
-
-		runString += " > /dev/null ; grep numCycles " + nameStat + "; rm " + nameStat
-		
-		originalPlace = os.getcwd()
-		os.chdir(place)
-		if inputs != "":
-			inputFile = open(inputs, "r")
-			startRun(runString, inputFile, name)
-		else:
-			startRun(runString, None, name + "_gem5_" + "big")
-		os.chdir(originalPlace)
-
-#########
-
-def startsAllRunsBoom(runsToDo):
-	for (name, place, benchmark, args, inputs, outputs) in runsToDo:
-		runString = BOOM_SIM + " -c " + BOOM_PK + " " + benchmark + " " + args
-		if outputs != "":
-			runString = runString + " > " + outputs
-
-		originalPlace = os.getcwd()
-		os.chdir(place)
-		if inputs != "":
-			inputFile = open(inputs, "r")
-			startRun(runString, inputFile, name)
-		else:
-			startRun(runString, None, name)
-		os.chdir(originalPlace)
-
-#########
-
-def startsAllRunsRocket(runsToDo):
-	for (name, place, benchmark, args, inputs, outputs) in runsToDo:
-		runString = ROCKET_SIM + " -c " + ROCKET_PK + " " + benchmark + " " + args
-		if outputs != "":
-			runString = runString + " > " + outputs
-
-		originalPlace = os.getcwd()
-		os.chdir(place)
-		if inputs != "":
-			inputFile = open(inputs, "r")
-			startRun(runString, inputFile, name)
-		else:
-			startRun(runString, None, name)
-		os.chdir(originalPlace)
-
-#########
 
 def startsAllRunsDBT(runsToDo, optLevels, configs, extra):
 	for oneConfig in configs:
@@ -309,40 +257,17 @@ def startsAllRunsDBT(runsToDo, optLevels, configs, extra):
 				startRun(runString, None, name + "_O" + str(oneOpt) + "_c" + str(oneConfig))
 				os.chdir(originalPlace)
 
-#########
 
-def startsAllRunsSimRISCV(runsToDo):
+def startsAllRunsQemu(runsToDo):
 	for (name, place, benchmark, args, inputs, outputs) in runsToDo:
-		runString = "simRISCV -f " + benchmark 
-		if inputs != "":
-			runString = runString + " -i " + inputs
-		if outputs != "":
-			runString = runString + " -o " + outputs
+		runString = "LD_LIBRARY_PATH=/temp_dd/igrida-fs1/srokicki/install/HybridDBT/build/ /temp_dd/igrida-fs1/srokicki/install/riscv-gnu-toolchain/toolchain/bin/qemu-riscv64 " + benchmark + " " 
 		if args != "":
-			runString = runString + " -a \" " + args + "\""
+			runString = runString + " " + args
 
 		originalPlace = os.getcwd()
 		os.chdir(place)
 		startRun(runString, None, name)
 		os.chdir(originalPlace)
-
-#########
-
-def startsAllRunsQemu(runsToDo, optLevels, configs, extra):
-	for oneConfig in configs:
-		for oneOpt in optLevels:
-			for (name, place, benchmark, args, inputs, outputs) in runsToDo:
-				runString = QEMU_LD + QEMU + " " + benchmark + " " + args 
-				if inputs != "":
-					runString = runString + " < " + inputs
-				if outputs != "":
-					runString = runString + " > " + outputs
-
-	
-				originalPlace = os.getcwd()
-				os.chdir(place)
-				startRun(runString, None, name + "_qemu")
-				os.chdir(originalPlace)
 
 
 ######################################################################################################################################################
@@ -354,7 +279,7 @@ def startsAllRunsQemu(runsToDo, optLevels, configs, extra):
 ##
 ######################################################################################################################################################
 
-def runDBTPerf(runsToDo):
+def runQemu(runsToDo):
 
 	resultFile = "results_qemu.csv"
 
@@ -362,7 +287,7 @@ def runDBTPerf(runsToDo):
 	if os.path.exists(resultFile):
 		return
 
-	startsAllRunsQemu(runsToDo, [4], [2], "")
+	startsAllRunsQemu(runsToDo)
 
 	results[resultFile] = []
 	resultList = results	[resultFile]
@@ -370,7 +295,7 @@ def runDBTPerf(runsToDo):
 	while	(len(runs) > 0):
 		(name, command, nameOut, nameErr, returnCode) = wait()
 
-		print "command " + command +" exited with code "+ str(returnCode)
+		print "command " + command +" exited ..."
 		resultList.append(parseResults(nameOut, name))
 
 		os.remove(nameOut)
@@ -385,17 +310,14 @@ def runDBTPerf(runsToDo):
 #["adpcm", "jpeg", "epic", "g721", "gsm", "mpeg2"]
 #["2mm","3mm", "adi", "atax", "bicg", "cholesky", "correlation", "covariance", "deriche", "doitgen", "durbin", "fdtd-2d", "floyd-warshall", "gemm", "gemver", "gesummv", "gramschmidt", "heat-3d", "jacobi-1d", "jacobi-2d", "lu", "ludcmp", "mvt", "nussinov", "seidel-2d", "symm", "syr2k", "syrk", "trisolv", "trmm"]
 #runsToDo = scanMediabench(["adpcm", "jpeg", "epic", "g721", "gsm", "mpeg2"])
-
 #runsToDo = scanPolybench(["2mm","3mm"])#, "atax", "bicg", "correlation", "covariance", "deriche", "doitgen", "durbin", "floyd-warshall", "gemm", "gemver", "gesummv", "gramschmidt", "heat-3d", "jacobi-1d", "jacobi-2d", "lu", "ludcmp", "nussinov", "seidel-2d", "syr2k", "syrk", "trisolv", "trmm"]) + scanMediabench(["adpcm", "jpeg", "epic", "g721", "gsm"])
 
-
 runsToDo = []
-polybenchApps = ["2mm","3mm", "adi", "atax", "bicg", "cholesky", "correlation", "covariance", "deriche", "doitgen", "durbin", "fdtd-2d", "floyd-warshall", "gemm", "gemver", "gesummv", "gramschmidt", "heat-3d", "jacobi-1d", "jacobi-2d", "lu", "ludcmp", "mvt", "nussinov", "seidel-2d", "symm", "syr2k", "syrk", "trisolv", "trmm"]
-mediabenchApps = ["adpcm", "jpeg", "epic", "g721", "gsm", "mpeg2"]
-specApps = ["600.perlbench_s",  "602.gcc_s",  "605.mcf_s",  "620.omnetpp_s",  "623.xalancbmk_s",  "625.x264_s",  "631.deepsjeng_s",  "641.leela_s",  "648.exchange2_s",  "657.xz_s"]
-
-
-runsToDo = scanMediabench(mediabenchApps) + scanPolybench(polybenchApps) + scanSpec(specApps)
+#polybenchApps = ["2mm","3mm", "atax", "bicg", "correlation", "covariance", "deriche", "doitgen", "durbin", "floyd-warshall", "gemm", "gemver", "gesummv", "gramschmidt", "heat-3d", "jacobi-1d", "jacobi-2d", "lu", "ludcmp", "nussinov", "seidel-2d", "syr2k", "syrk", "trisolv", "trmm"]
+#mediabenchApps = ["adpcm", "jpeg", "epic", "g721", "gsm"]
+polybenchApps = ["2mm","3mm", "atax", "bicg"]
+mediabenchApps = []
+#runsToDo = scanMediabench(["adpcm", "jpeg", "epic", "g721", "gsm"])
 
 if len(sys.argv) > 1:
 	if sys.argv[1] in ["help", "-h", "--help"]:
@@ -417,16 +339,12 @@ if len(sys.argv) > 1:
 			else:
 				print "Unknown application '" + oneApp + "'. Ignoring it."
 else:
-	runsToDo = scanPolybench(polybenchApps) + scanMediabench(mediabenchApps)
+	runsToDo = scanSpec()
 
 checkConfig()
 
-runDBTPerf(runsToDo)
-#runDBTCM3(runsToDo)
-#runDBTCM7(runsToDo)
-#runDBTCM11(runsToDo)
 
-#runDBTPerf(runsToDo)
+runQemu(runsToDo)
 #runDBTnoSpec(runsToDo)
 #runLittle(runsToDo)
 #runDBTc0(runsToDo)
