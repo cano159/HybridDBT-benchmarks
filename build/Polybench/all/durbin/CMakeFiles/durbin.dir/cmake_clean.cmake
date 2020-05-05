@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/durbin.dir/durbin.c.o"
   "CMakeFiles/durbin.dir/__/__/utilities/polybench.c.o"
-  "bin/durbin.pdb"
+  "CMakeFiles/durbin.dir/durbin.c.o"
   "bin/durbin"
+  "bin/durbin.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/wrjpgcom.dir/wrjpgcom.c.o"
-  "bin/wrjpgcom.pdb"
   "bin/wrjpgcom"
+  "bin/wrjpgcom.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

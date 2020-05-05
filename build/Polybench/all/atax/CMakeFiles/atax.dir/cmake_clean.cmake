@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/atax.dir/atax.c.o"
   "CMakeFiles/atax.dir/__/__/utilities/polybench.c.o"
-  "bin/atax.pdb"
+  "CMakeFiles/atax.dir/atax.c.o"
   "bin/atax"
+  "bin/atax.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

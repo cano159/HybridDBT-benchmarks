@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/ghostscript/src/echogs.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/ghostscript/src/echogs.c
 stdio.h
 -
 sys/types.h

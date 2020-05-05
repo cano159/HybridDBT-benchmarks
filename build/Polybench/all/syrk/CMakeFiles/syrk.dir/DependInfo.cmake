@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/utilities/polybench.c" "/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Polybench/all/syrk/CMakeFiles/syrk.dir/__/__/utilities/polybench.c.o"
-  "/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/all/syrk/syrk.c" "/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Polybench/all/syrk/CMakeFiles/syrk.dir/syrk.c.o"
+  "/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/utilities/polybench.c" "/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Polybench/all/syrk/CMakeFiles/syrk.dir/__/__/utilities/polybench.c.o"
+  "/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/all/syrk/syrk.c" "/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Polybench/all/syrk/CMakeFiles/syrk.dir/syrk.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
-  "MEDIUM_DATASET"
+  "MINI_DATASET"
   )
 
 # The include file search paths:

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/trmm.dir/trmm.c.o"
   "CMakeFiles/trmm.dir/__/__/utilities/polybench.c.o"
-  "bin/trmm.pdb"
+  "CMakeFiles/trmm.dir/trmm.c.o"
   "bin/trmm"
+  "bin/trmm.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

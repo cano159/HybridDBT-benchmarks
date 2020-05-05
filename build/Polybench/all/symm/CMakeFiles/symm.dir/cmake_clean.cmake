@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/symm.dir/symm.c.o"
   "CMakeFiles/symm.dir/__/__/utilities/polybench.c.o"
-  "bin/symm.pdb"
+  "CMakeFiles/symm.dir/symm.c.o"
   "bin/symm"
+  "bin/symm.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

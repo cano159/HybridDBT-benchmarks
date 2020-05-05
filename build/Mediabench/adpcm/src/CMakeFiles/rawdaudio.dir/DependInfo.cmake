@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/adpcm/src/adpcm.c" "/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/adpcm/src/CMakeFiles/rawdaudio.dir/adpcm.c.o"
-  "/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/adpcm/src/rawdaudio.c" "/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/adpcm/src/CMakeFiles/rawdaudio.dir/rawdaudio.c.o"
+  "/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/adpcm/src/adpcm.c" "/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/adpcm/src/CMakeFiles/rawdaudio.dir/adpcm.c.o"
+  "/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/adpcm/src/rawdaudio.c" "/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/adpcm/src/CMakeFiles/rawdaudio.dir/rawdaudio.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

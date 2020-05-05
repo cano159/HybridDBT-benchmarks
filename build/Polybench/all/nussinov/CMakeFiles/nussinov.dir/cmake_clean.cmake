@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/nussinov.dir/nussinov.c.o"
   "CMakeFiles/nussinov.dir/__/__/utilities/polybench.c.o"
-  "bin/nussinov.pdb"
+  "CMakeFiles/nussinov.dir/nussinov.c.o"
   "bin/nussinov"
+  "bin/nussinov.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

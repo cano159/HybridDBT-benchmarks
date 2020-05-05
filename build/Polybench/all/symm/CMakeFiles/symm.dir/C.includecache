@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-../Polybench/all/symm/../../utilities/polybench.h
+../Polybench/utilities/polybench.h
 stdlib.h
 -
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/all/symm/symm.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/all/symm/symm.c
 stdio.h
 -
 unistd.h
@@ -22,13 +22,13 @@ math.h
 polybench.h
 -
 symm.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/all/symm/symm.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/all/symm/symm.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/all/symm/symm.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/all/symm/symm.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/utilities/papi_counters.list
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/utilities/papi_counters.list
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/utilities/polybench.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/utilities/polybench.c
 stdio.h
 -
 string.h
@@ -52,15 +52,15 @@ math.h
 omp.h
 -
 polybench.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/utilities/polybench.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/utilities/polybench.h
 polybench.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/utilities/polybench.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/utilities/polybench.h
 papi.h
 -
 papi_counters.list
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/utilities/papi_counters.list
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/utilities/papi_counters.list
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/utilities/polybench.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Polybench/utilities/polybench.h
 stdlib.h
 -
 

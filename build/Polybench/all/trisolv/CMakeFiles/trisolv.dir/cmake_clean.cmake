@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/trisolv.dir/trisolv.c.o"
   "CMakeFiles/trisolv.dir/__/__/utilities/polybench.c.o"
-  "bin/trisolv.pdb"
+  "CMakeFiles/trisolv.dir/trisolv.c.o"
   "bin/trisolv"
+  "bin/trisolv.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

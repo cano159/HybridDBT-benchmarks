@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -60,23 +60,23 @@ proto.h
 
 ../Mediabench/gsm/inc/unproto.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast.c
 toast.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast_alaw.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast_alaw.c
 toast.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast_audio.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast_audio.c
 toast.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast_lin.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast_lin.c
 toast.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast_ulaw.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast_ulaw.c
 toast.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/gsm/src/toast.h
 

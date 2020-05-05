@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/ansi2knr.c" "/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/jpeg/jpeg-6a/CMakeFiles/ansi2knr.dir/ansi2knr.c.o"
+  "/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/ansi2knr.c" "/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/jpeg/jpeg-6a/CMakeFiles/ansi2knr.dir/ansi2knr.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

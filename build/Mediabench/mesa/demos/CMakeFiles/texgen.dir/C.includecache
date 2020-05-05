@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -24,7 +24,7 @@ GL/gl.h
 GL/gl.h
 ../Mediabench/mesa/include/GL/GL/gl.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/demos/texgen.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/demos/texgen.c
 GL/gl.h
 -
 GL/glu.h
@@ -34,5 +34,5 @@ stdlib.h
 stdio.h
 -
 GL/osmesa.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/demos/GL/osmesa.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/demos/GL/osmesa.h
 

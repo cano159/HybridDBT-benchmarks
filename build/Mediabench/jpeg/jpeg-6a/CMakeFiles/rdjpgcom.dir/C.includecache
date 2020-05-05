@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jconfig.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jconfig.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jinclude.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jinclude.h
 jconfig.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jconfig.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jconfig.h
 stddef.h
 -
 stdlib.h
@@ -22,9 +22,9 @@ stdio.h
 string.h
 -
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/rdjpgcom.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/rdjpgcom.c
 jinclude.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jinclude.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jinclude.h
 ctype.h
 -
 fcntl.h

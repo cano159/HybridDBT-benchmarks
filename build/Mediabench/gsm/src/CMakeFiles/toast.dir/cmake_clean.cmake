@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/toast.dir/toast.c.o"
-  "CMakeFiles/toast.dir/toast_lin.c.o"
-  "CMakeFiles/toast.dir/toast_ulaw.c.o"
   "CMakeFiles/toast.dir/toast_alaw.c.o"
   "CMakeFiles/toast.dir/toast_audio.c.o"
-  "bin/toast.pdb"
+  "CMakeFiles/toast.dir/toast_lin.c.o"
+  "CMakeFiles/toast.dir/toast_ulaw.c.o"
   "bin/toast"
+  "bin/toast.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

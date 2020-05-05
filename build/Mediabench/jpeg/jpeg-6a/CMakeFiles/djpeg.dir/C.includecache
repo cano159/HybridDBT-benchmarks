@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cderror.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cderror.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.c
 cdjpeg.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
 ctype.h
 -
 signal.h
@@ -20,21 +20,21 @@ fcntl.h
 io.h
 -
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
 jinclude.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jinclude.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jinclude.h
 jpeglib.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jpeglib.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jpeglib.h
 jerror.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jerror.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jerror.h
 cderror.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cderror.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cderror.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/djpeg.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/djpeg.c
 cdjpeg.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
 jversion.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jversion.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jversion.h
 ctype.h
 -
 SIOUX.h
@@ -44,15 +44,15 @@ console.h
 console.h
 -
 cderror.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cderror.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cderror.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jconfig.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jconfig.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jerror.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jerror.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jinclude.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jinclude.h
 jconfig.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jconfig.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jconfig.h
 stddef.h
 -
 stdlib.h
@@ -64,45 +64,45 @@ stdio.h
 string.h
 -
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jmorecfg.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jmorecfg.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jpegint.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jpegint.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jpeglib.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jpeglib.h
 jconfig.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jconfig.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jconfig.h
 jmorecfg.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jmorecfg.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jmorecfg.h
 jpegint.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jpegint.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jpegint.h
 jerror.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jerror.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jerror.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jversion.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/jversion.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/rdcolmap.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/rdcolmap.c
 cdjpeg.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/wrbmp.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/wrbmp.c
 cdjpeg.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/wrgif.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/wrgif.c
 cdjpeg.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/wrppm.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/wrppm.c
 cdjpeg.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/wrrle.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/wrrle.c
 cdjpeg.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
 rle.h
 -
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/wrtarga.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/wrtarga.c
 cdjpeg.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/jpeg/jpeg-6a/cdjpeg.h
 

@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/display.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/display.c
 stdio.h
 -
 stdlib.h
@@ -18,9 +18,9 @@ X11/Xlib.h
 X11/Xutil.h
 -
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 global.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
 sys/ipc.h
 -
 sys/shm.h
@@ -28,75 +28,75 @@ sys/shm.h
 X11/extensions/XShm.h
 -
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/getbits.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/getbits.c
 stdio.h
 -
 stdlib.h
 -
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 global.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/getblk.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/getblk.c
 stdio.h
 -
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 global.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/gethdr.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/gethdr.c
 stdio.h
 -
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 global.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/getpic.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/getpic.c
 stdio.h
 -
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 global.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/getvlc.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/getvlc.c
 stdio.h
 -
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 global.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
 getvlc.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/getvlc.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/getvlc.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/getvlc.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/getvlc.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
 mpeg2dec.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/mpeg2dec.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/mpeg2dec.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/idct.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/idct.c
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/idctref.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/idctref.c
 math.h
 -
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/motion.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/motion.c
 stdio.h
 -
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 global.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/mpeg2dec.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/mpeg2dec.c
 stdio.h
 -
 stdlib.h
@@ -106,41 +106,29 @@ ctype.h
 fcntl.h
 -
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 global.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/mpeg2dec.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/mpeg2dec.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/recon.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/recon.c
 stdio.h
 -
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 global.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/spatscal.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/spatscal.c
 stdio.h
 -
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 global.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/store.c
-stdio.h
--
-stdlib.h
--
-fcntl.h
--
-config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
-global.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
-
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/subspic.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/store.c
 stdio.h
 -
 stdlib.h
@@ -148,21 +136,33 @@ stdlib.h
 fcntl.h
 -
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 global.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/systems.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/subspic.c
+stdio.h
+-
+stdlib.h
+-
+fcntl.h
+-
+config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/systems.c
 stdio.h
 -
 stdlib.h
 -
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 global.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/verify.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/verify.c
 stdio.h
 -
 stdlib.h
@@ -174,9 +174,9 @@ fcntl.h
 math.h
 -
 config.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/config.h
 global.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mpeg2/src/mpeg2dec/global.h
 conio.h
 -
 

@@ -30,7 +30,7 @@ transform = s,x,x,
 
 # Programs we use.
 
-CC = /home/simon/Documents/Recherche/RISCV-toolchain/riscv/bin/riscv64-unknown-elf-gcc 
+CC = riscv64-unknown-linux-gnu-gcc 
 LD = $(CC)
 INSTALL = ./install-sh -c
 INSTALL_PROG = $(INSTALL)

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/rawdaudio.dir/rawdaudio.c.o"
   "CMakeFiles/rawdaudio.dir/adpcm.c.o"
-  "bin/rawdaudio.pdb"
+  "CMakeFiles/rawdaudio.dir/rawdaudio.c.o"
   "bin/rawdaudio"
+  "bin/rawdaudio.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

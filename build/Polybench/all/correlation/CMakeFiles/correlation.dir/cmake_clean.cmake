@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/correlation.dir/correlation.c.o"
   "CMakeFiles/correlation.dir/__/__/utilities/polybench.c.o"
-  "bin/correlation.pdb"
+  "CMakeFiles/correlation.dir/correlation.c.o"
   "bin/correlation"
+  "bin/correlation.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

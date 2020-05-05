@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/adi.dir/adi.c.o"
   "CMakeFiles/adi.dir/__/__/utilities/polybench.c.o"
-  "bin/adi.pdb"
+  "CMakeFiles/adi.dir/adi.c.o"
   "bin/adi"
+  "bin/adi.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

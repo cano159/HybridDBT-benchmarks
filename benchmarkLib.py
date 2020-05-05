@@ -8,8 +8,8 @@ ROCKET_SIM=""
 ROCKET_PK=""
 GEM5=""
 
-QEMU = "/opt/riscv/bin/qemu-riscv64"
-QEMU_LD = "LD_LIBRARY_PATH=/home/simon/Documents/Recherche/HybridDBT/build "
+QEMU = "qemu-riscv64"
+QEMU_LD = ""
 runs = []
 tempFiles = []
 results = {}
@@ -31,22 +31,20 @@ results = {}
 
 def checkConfig():
 	if not distutils.spawn.find_executable("dbt"):
-		print "Error: Can't find Hybrid-DBT main executable. Please add it to your PATH."
-		exit()
+		print("Error: Can't find Hybrid-DBT main executable. Please add it to your PATH.")
 
 	if not distutils.spawn.find_executable("simRISCV"):
-		print "Error: Can't find simRISCV main executable (from Hybrid-DBT git). Please add it to your PATH."
-		exit()
+		print("Error: Can't find simRISCV main executable (from Hybrid-DBT git). Please add it to your PATH.")
 
 	if GEM5 == "" and not distutils.spawn.find_executable("gem5"):
-		print "WARNING: Can't find gem5 executable. Please add it to your PATH, document its location in the script or remove the experiment based on GEM5."
-	
+		print("WARNING: Can't find gem5 executable. Please add it to your PATH, document its location in the script or remove the experiment based on GEM5.")
+
 ########
 
 def getTempFileName():
 	random.seed()
 	tempFileName = "/tmp/tempFile" + hex(random.randint(0, 4000000000000000000000000))[2:]
-	
+
 	if os.path.exists(tempFileName):
 		return getTempFileName()
 	else:
@@ -70,15 +68,15 @@ def getRunTime(process):
 	os.remove(tempFileName)
 	return int(value.split(':')[0])
 
-	
+
 #########
 
 def startRun(command, inFile, name):
 	nameErr = getTempFileName()
 	nameOut = getTempFileName()
 
-	err = file(nameErr, "w")
-	out = file(nameOut, "w")
+	err = open(nameErr, "w")
+	out = open(nameOut, "w")
 
 	process = subprocess.Popen(command, stdin = inFile, stdout = out, stderr = err, shell = True)
 
@@ -96,7 +94,7 @@ def startRunOAR(command, inFile, name):
 #########
 
 def wait():
-	while True:	
+	while True:
 		for (name, command, nameOut, nameErr, out, err, process) in runs:
 			#getRunTime(process)
 			if process.poll() != None:
@@ -193,7 +191,7 @@ def scanPolybench(benchmarks):
 	localResult = []
 	for oneBenchmark in benchmarks:
 
-		localResult.append((oneBenchmark, "./", "./build/Polybench_modif/all/" + oneBenchmark + "/bin/" + oneBenchmark, "", "", ""))
+		localResult.append((oneBenchmark, "./", "./build/Polybench/all/" + oneBenchmark + "/bin/" + oneBenchmark, "", "", ""))
 
 	return localResult;
 
@@ -213,7 +211,7 @@ def scanSpec(benchmarks):
 				break
 
 		localResult.append((oneBenchmark, "./", "./Spec/" + oneBenchmark + "/" + binaryFile, args, "", ""))
-		print localResult[-1]
+		print(localResult[-1])
 	return localResult
 
 ######################################################################################################################################################
@@ -240,13 +238,13 @@ def startsAllRunsGem5Big(runsToDo):
 		runString = "gem5.opt " + " --stats-file=" + nameStat + " " + proc + " --caches --l2cache --l1d_size=8192 --l1i_size=8192 --l2_size=1048576 --l1d_assoc=4 --l1i_assoc=4 --l2_assoc=8 --cpu-clock=700MHz -c " + benchmark
 
 		if args != "":
-			runString += " --options=\"" + args + "\" " 
+			runString += " --options=\"" + args + "\" "
 
 		if inputs != "":
-			runString += " -i" + inputs + " " 
+			runString += " -i" + inputs + " "
 
 		runString += " > /dev/null ; grep numCycles " + nameStat + "; rm " + nameStat
-		
+
 		originalPlace = os.getcwd()
 		os.chdir(place)
 		if inputs != "":
@@ -296,14 +294,14 @@ def startsAllRunsDBT(runsToDo, optLevels, configs, extra):
 	for oneConfig in configs:
 		for oneOpt in optLevels:
 			for (name, place, benchmark, args, inputs, outputs) in runsToDo:
-				runString = "dbt -f " + benchmark + " -O " + str(oneOpt) + " -c " + str(oneConfig) + " " + extra + " " 
+				runString = "dbt -f " + benchmark + " -O " + str(oneOpt) + " -c " + str(oneConfig) + " " + extra + " "
 				if inputs != "":
 					runString = runString + " -i " + inputs
 				if outputs != "":
 					runString = runString + " -o " + outputs
 				if args != "":
 					runString = runString +" -- " + args
-	
+
 				originalPlace = os.getcwd()
 				os.chdir(place)
 				startRun(runString, None, name + "_O" + str(oneOpt) + "_c" + str(oneConfig))
@@ -313,7 +311,7 @@ def startsAllRunsDBT(runsToDo, optLevels, configs, extra):
 
 def startsAllRunsSimRISCV(runsToDo):
 	for (name, place, benchmark, args, inputs, outputs) in runsToDo:
-		runString = "simRISCV -f " + benchmark 
+		runString = "simRISCV -f " + benchmark
 		if inputs != "":
 			runString = runString + " -i " + inputs
 		if outputs != "":
@@ -332,13 +330,13 @@ def startsAllRunsQemu(runsToDo, optLevels, configs, extra):
 	for oneConfig in configs:
 		for oneOpt in optLevels:
 			for (name, place, benchmark, args, inputs, outputs) in runsToDo:
-				runString = QEMU_LD + QEMU + " " + benchmark + " " + args 
+				runString = QEMU_LD + QEMU + " " + benchmark + " " + args
 				if inputs != "":
 					runString = runString + " < " + inputs
 				if outputs != "":
 					runString = runString + " > " + outputs
 
-	
+
 				originalPlace = os.getcwd()
 				os.chdir(place)
 				startRun(runString, None, name + "_qemu")
@@ -362,7 +360,7 @@ def runDBTPerf(runsToDo):
 	if os.path.exists(resultFile):
 		return
 
-	startsAllRunsQemu(runsToDo, [4], [2], "")
+	startsAllRunsSimRISCV(runsToDo)
 
 	results[resultFile] = []
 	resultList = results	[resultFile]
@@ -370,7 +368,7 @@ def runDBTPerf(runsToDo):
 	while	(len(runs) > 0):
 		(name, command, nameOut, nameErr, returnCode) = wait()
 
-		print "command " + command +" exited with code "+ str(returnCode)
+		print("command " + command +" exited with code "+ str(returnCode))
 		resultList.append(parseResults(nameOut, name))
 
 		os.remove(nameOut)
@@ -395,18 +393,19 @@ mediabenchApps = ["adpcm", "jpeg", "epic", "g721", "gsm", "mpeg2"]
 specApps = ["600.perlbench_s",  "602.gcc_s",  "605.mcf_s",  "620.omnetpp_s",  "623.xalancbmk_s",  "625.x264_s",  "631.deepsjeng_s",  "641.leela_s",  "648.exchange2_s",  "657.xz_s"]
 
 
-runsToDo = scanMediabench(mediabenchApps) + scanPolybench(polybenchApps) + scanSpec(specApps)
+#runsToDo = scanMediabench(mediabenchApps) + scanPolybench(polybenchApps) + scanSpec(specApps)
+runsToDo = scanPolybench(polybenchApps)
 
 if len(sys.argv) > 1:
 	if sys.argv[1] in ["help", "-h", "--help"]:
-		print "Usage: ./benchmarkLib.py [help/-h/--help] [apps]"
-		print "Where apps is a list of application names from Polybench or Mediabench"
-		print "Accepted Polybench apps are:"
+		print("Usage: ./benchmarkLib.py [help/-h/--help] [apps]")
+		print("Where apps is a list of application names from Polybench or Mediabench")
+		print("Accepted Polybench apps are:")
 		for oneApp in polybenchApps:
-			print oneApp + " ",
-		print "\nAccepted Mediabenchd apps are:"
+			print(oneApp + " ", end='')
+		print("\nAccepted Mediabenchd apps are:")
 		for oneApp in mediabenchApps:
-			print oneApp + " ",
+			print(oneApp + " ", end='')
 		exit()
 	else:
 		for oneApp in sys.argv[1:]:
@@ -415,9 +414,9 @@ if len(sys.argv) > 1:
 			elif oneApp in mediabenchApps:
 				runsToDo = runsToDo + scanMediabench([oneApp])
 			else:
-				print "Unknown application '" + oneApp + "'. Ignoring it."
+				print("Unknown application '" + oneApp + "'. Ignoring it.")
 else:
-	runsToDo = scanPolybench(polybenchApps) + scanMediabench(mediabenchApps)
+	runsToDo = scanPolybench(polybenchApps)
 
 checkConfig()
 
@@ -440,9 +439,9 @@ runDBTPerf(runsToDo)
 #runDBTreconf2(runsToDo)
 #runBIG(runsToDo)
 
-# List of all experiments that have to be run 
+# List of all experiments that have to be run
 #
-# For all bnchmarks: 
+# For all bnchmarks:
 #		- running at different optimization levels with only configuration 2.
 #   - running with main configurations only at optimization level 2
 #  	- running with configuration 0 and optimization level 3 (reconf)
@@ -452,5 +451,3 @@ runDBTPerf(runsToDo)
 #		- running with software DBT
 # 	- running with tatic DBT on simRISCV
 #		- running with reconfiguration models
-
-

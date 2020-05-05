@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/gemm.dir/gemm.c.o"
   "CMakeFiles/gemm.dir/__/__/utilities/polybench.c.o"
-  "bin/gemm.pdb"
+  "CMakeFiles/gemm.dir/gemm.c.o"
   "bin/gemm"
+  "bin/gemm.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

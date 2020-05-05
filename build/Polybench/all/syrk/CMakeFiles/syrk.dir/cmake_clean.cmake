@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/syrk.dir/syrk.c.o"
   "CMakeFiles/syrk.dir/__/__/utilities/polybench.c.o"
-  "bin/syrk.pdb"
+  "CMakeFiles/syrk.dir/syrk.c.o"
   "bin/syrk"
+  "bin/syrk.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

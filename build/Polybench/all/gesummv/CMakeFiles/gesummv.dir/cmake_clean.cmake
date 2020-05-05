@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/gesummv.dir/gesummv.c.o"
   "CMakeFiles/gesummv.dir/__/__/utilities/polybench.c.o"
-  "bin/gesummv.pdb"
+  "CMakeFiles/gesummv.dir/gesummv.c.o"
   "bin/gesummv"
+  "bin/gesummv.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

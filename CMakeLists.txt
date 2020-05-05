@@ -7,8 +7,8 @@ set(CMAKE_CXX_COMPILER riscv64-unknown-linux-gnu-g++)
 
 project (HybridDBT_testbench)
 
-set(CMAKE_C_FLAGS "-O3 -static -DSMALL_DATASET -DDATA_TYPE_IS_INT")
-set(CMAKE_CXX_FLAGS "-O3 -static -DSMALL_DATASET -DDATA_TYPE_IS_INT")
+set(CMAKE_C_FLAGS "-O3 -static -DSMALL_DATASET -DDATA_TYPE_IS_INT -march=rv64g")
+set(CMAKE_CXX_FLAGS "-O3 -static -DSMALL_DATASET -DDATA_TYPE_IS_INT -march=rv64g")
 
 
 link_libraries("-lm")

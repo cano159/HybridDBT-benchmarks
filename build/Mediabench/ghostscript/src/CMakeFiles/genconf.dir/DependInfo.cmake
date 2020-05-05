@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/ghostscript/src/genconf.c" "/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/ghostscript/src/CMakeFiles/genconf.dir/genconf.c.o"
+  "/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/ghostscript/src/genconf.c" "/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/ghostscript/src/CMakeFiles/genconf.dir/genconf.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

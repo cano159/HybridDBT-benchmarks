@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mvt.dir/mvt.c.o"
   "CMakeFiles/mvt.dir/__/__/utilities/polybench.c.o"
-  "bin/mvt.pdb"
+  "CMakeFiles/mvt.dir/mvt.c.o"
   "bin/mvt"
+  "bin/mvt.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

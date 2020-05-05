@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/floyd-warshall.dir/floyd-warshall.c.o"
   "CMakeFiles/floyd-warshall.dir/__/__/utilities/polybench.c.o"
-  "bin/floyd-warshall.pdb"
+  "CMakeFiles/floyd-warshall.dir/floyd-warshall.c.o"
   "bin/floyd-warshall"
+  "bin/floyd-warshall.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

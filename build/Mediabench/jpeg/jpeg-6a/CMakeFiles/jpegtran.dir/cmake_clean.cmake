@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/jpegtran.dir/cdjpeg.c.o"
   "CMakeFiles/jpegtran.dir/jpegtran.c.o"
   "CMakeFiles/jpegtran.dir/rdswitch.c.o"
-  "CMakeFiles/jpegtran.dir/cdjpeg.c.o"
-  "bin/jpegtran.pdb"
   "bin/jpegtran"
+  "bin/jpegtran.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

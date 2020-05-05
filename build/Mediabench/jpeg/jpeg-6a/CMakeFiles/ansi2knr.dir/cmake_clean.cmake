@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ansi2knr.dir/ansi2knr.c.o"
-  "bin/ansi2knr.pdb"
   "bin/ansi2knr"
+  "bin/ansi2knr.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

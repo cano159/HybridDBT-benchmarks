@@ -1,14 +1,14 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/djpeg.dir/djpeg.c.o"
-  "CMakeFiles/djpeg.dir/wrppm.c.o"
-  "CMakeFiles/djpeg.dir/wrgif.c.o"
-  "CMakeFiles/djpeg.dir/wrtarga.c.o"
-  "CMakeFiles/djpeg.dir/wrrle.c.o"
-  "CMakeFiles/djpeg.dir/wrbmp.c.o"
-  "CMakeFiles/djpeg.dir/rdcolmap.c.o"
   "CMakeFiles/djpeg.dir/cdjpeg.c.o"
-  "bin/djpeg.pdb"
+  "CMakeFiles/djpeg.dir/djpeg.c.o"
+  "CMakeFiles/djpeg.dir/rdcolmap.c.o"
+  "CMakeFiles/djpeg.dir/wrbmp.c.o"
+  "CMakeFiles/djpeg.dir/wrgif.c.o"
+  "CMakeFiles/djpeg.dir/wrppm.c.o"
+  "CMakeFiles/djpeg.dir/wrrle.c.o"
+  "CMakeFiles/djpeg.dir/wrtarga.c.o"
   "bin/djpeg"
+  "bin/djpeg.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

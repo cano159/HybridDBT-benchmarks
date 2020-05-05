@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/bicg.dir/bicg.c.o"
   "CMakeFiles/bicg.dir/__/__/utilities/polybench.c.o"
-  "bin/bicg.pdb"
+  "CMakeFiles/bicg.dir/bicg.c.o"
   "bin/bicg"
+  "bin/bicg.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

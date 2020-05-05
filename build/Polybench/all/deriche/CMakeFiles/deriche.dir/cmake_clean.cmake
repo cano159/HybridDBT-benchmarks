@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/deriche.dir/deriche.c.o"
   "CMakeFiles/deriche.dir/__/__/utilities/polybench.c.o"
-  "bin/deriche.pdb"
+  "CMakeFiles/deriche.dir/deriche.c.o"
   "bin/deriche"
+  "bin/deriche.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

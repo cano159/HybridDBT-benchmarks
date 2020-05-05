@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/osdemo.dir/osdemo.c.o"
-  "bin/osdemo.pdb"
   "bin/osdemo"
+  "bin/osdemo.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

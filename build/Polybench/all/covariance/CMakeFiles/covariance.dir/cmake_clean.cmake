@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/covariance.dir/covariance.c.o"
   "CMakeFiles/covariance.dir/__/__/utilities/polybench.c.o"
-  "bin/covariance.pdb"
+  "CMakeFiles/covariance.dir/covariance.c.o"
   "bin/covariance"
+  "bin/covariance.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

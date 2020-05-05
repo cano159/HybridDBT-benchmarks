@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/echogs.dir/echogs.c.o"
-  "bin/echogs.pdb"
   "bin/echogs"
+  "bin/echogs.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

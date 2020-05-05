@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/doitgen.dir/doitgen.c.o"
   "CMakeFiles/doitgen.dir/__/__/utilities/polybench.c.o"
-  "bin/doitgen.pdb"
+  "CMakeFiles/doitgen.dir/doitgen.c.o"
   "bin/doitgen"
+  "bin/doitgen.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

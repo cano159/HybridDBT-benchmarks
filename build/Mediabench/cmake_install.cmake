@@ -1,4 +1,4 @@
-# Install script for directory: /home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench
+# Install script for directory: /home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,21 +29,25 @@ endif()
 
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
+  set(CMAKE_INSTALL_SO_NO_EXE "0")
+endif()
+
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/epic/cmake_install.cmake")
-  include("/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/g721/cmake_install.cmake")
-  include("/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/mesa/cmake_install.cmake")
-  include("/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/mpeg2/cmake_install.cmake")
-  include("/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/pegwit/cmake_install.cmake")
-  include("/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/rasta/cmake_install.cmake")
-  include("/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/adpcm/cmake_install.cmake")
-  include("/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/ghostscript/cmake_install.cmake")
-  include("/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/gsm/cmake_install.cmake")
-  include("/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/jpeg/cmake_install.cmake")
+  include("/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/epic/cmake_install.cmake")
+  include("/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/g721/cmake_install.cmake")
+  include("/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/mesa/cmake_install.cmake")
+  include("/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/mpeg2/cmake_install.cmake")
+  include("/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/pegwit/cmake_install.cmake")
+  include("/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/adpcm/cmake_install.cmake")
+  include("/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/ghostscript/cmake_install.cmake")
+  include("/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/gsm/cmake_install.cmake")
+  include("/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/build/Mediabench/jpeg/cmake_install.cmake")
 
 endif()
 

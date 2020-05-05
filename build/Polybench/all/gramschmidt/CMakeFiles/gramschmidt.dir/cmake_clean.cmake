@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/gramschmidt.dir/gramschmidt.c.o"
   "CMakeFiles/gramschmidt.dir/__/__/utilities/polybench.c.o"
-  "bin/gramschmidt.pdb"
+  "CMakeFiles/gramschmidt.dir/gramschmidt.c.o"
   "bin/gramschmidt"
+  "bin/gramschmidt.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

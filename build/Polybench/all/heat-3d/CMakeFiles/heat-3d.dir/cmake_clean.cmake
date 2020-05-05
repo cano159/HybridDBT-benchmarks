@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/heat-3d.dir/heat-3d.c.o"
   "CMakeFiles/heat-3d.dir/__/__/utilities/polybench.c.o"
-  "bin/heat-3d.pdb"
+  "CMakeFiles/heat-3d.dir/heat-3d.c.o"
   "bin/heat-3d"
+  "bin/heat-3d.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

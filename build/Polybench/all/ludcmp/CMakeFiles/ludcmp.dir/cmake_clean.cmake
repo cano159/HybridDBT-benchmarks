@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ludcmp.dir/ludcmp.c.o"
   "CMakeFiles/ludcmp.dir/__/__/utilities/polybench.c.o"
-  "bin/ludcmp.pdb"
+  "CMakeFiles/ludcmp.dir/ludcmp.c.o"
   "bin/ludcmp"
+  "bin/ludcmp.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

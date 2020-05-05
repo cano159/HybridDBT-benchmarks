@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -20,7 +20,7 @@ GL/gl.h
 
 ../Mediabench/mesa/include/GL/glu_mangle.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/glu.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/glu.c
 math.h
 -
 stdio.h
@@ -28,15 +28,15 @@ stdio.h
 stdlib.h
 -
 gluP.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
 GL/gl.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/GL/gl.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/GL/gl.h
 GL/glu.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/GL/glu.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/GL/glu.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/mipmap.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/mipmap.c
 assert.h
 -
 math.h
@@ -46,9 +46,9 @@ stdio.h
 stdlib.h
 -
 gluP.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbs.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbs.c
 math.h
 -
 stdio.h
@@ -56,61 +56,61 @@ stdio.h
 stdlib.h
 -
 nurbs.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbs.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbs.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbs.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbs.h
 stdlib.h
 -
 gluP.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbscrv.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbscrv.c
 math.h
 -
 stdlib.h
 -
 nurbs.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbs.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbs.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbssrf.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbssrf.c
 math.h
 -
 stdlib.h
 -
-stdio.h
--
-string.h
--
-nurbs.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbs.h
-
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbsutl.c
-math.h
--
-nurbs.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbs.h
-
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/polytest.c
-math.h
--
-stdlib.h
--
-gluP.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
-tess.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/tess.h
-
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/project.c
 stdio.h
 -
 string.h
 -
+nurbs.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbs.h
+
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbsutl.c
+math.h
+-
+nurbs.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/nurbs.h
+
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/polytest.c
+math.h
+-
+stdlib.h
+-
+gluP.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
+tess.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/tess.h
+
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/project.c
+stdio.h
+-
+string.h
+-
 math.h
 -
 gluP.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/quadric.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/quadric.c
 math.h
 -
 stdio.h
@@ -118,25 +118,25 @@ stdio.h
 stdlib.h
 -
 gluP.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/tess.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/tess.c
 math.h
 -
 stdlib.h
 -
 tess.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/tess.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/tess.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/tess.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/tess.h
 gluP.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/gluP.h
 
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/tesselat.c
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/tesselat.c
 stdlib.h
 -
 math.h
 -
 tess.h
-/home/simon/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/tess.h
+/home/srokicki/Documents/Recherche/Benchmarks/HybridDBT-benchmarks/Mediabench/mesa/src-glu/tess.h
 

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/mipmap.dir/mipmap.c.o"
-  "bin/mipmap.pdb"
   "bin/mipmap"
+  "bin/mipmap.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/texgen.dir/texgen.c.o"
-  "bin/texgen.pdb"
   "bin/texgen"
+  "bin/texgen.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

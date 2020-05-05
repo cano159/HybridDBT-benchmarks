@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lu.dir/lu.c.o"
   "CMakeFiles/lu.dir/__/__/utilities/polybench.c.o"
-  "bin/lu.pdb"
+  "CMakeFiles/lu.dir/lu.c.o"
   "bin/lu"
+  "bin/lu.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
