@@ -1,1 +1,0 @@
-/opt/riscv/rv64g-linux/bin/riscv64-unknown-linux-gnu-gcc -O3 -static -DSMALL_DATASET -DDATA_TYPE_IS_INT -march=rv64g   CMakeFiles/encode.dir/encode.c.o CMakeFiles/encode.dir/g711.c.o CMakeFiles/encode.dir/g72x.c.o CMakeFiles/encode.dir/g721.c.o CMakeFiles/encode.dir/g723_24.c.o CMakeFiles/encode.dir/g723_40.c.o  -o bin/encode  -lm 

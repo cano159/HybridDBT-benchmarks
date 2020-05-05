@@ -1,1 +1,0 @@
-/opt/riscv/rv64g-linux/bin/riscv64-unknown-linux-gnu-gcc -O3 -static -DSMALL_DATASET -DDATA_TYPE_IS_INT -march=rv64g   CMakeFiles/untoast.dir/toast.c.o CMakeFiles/untoast.dir/toast_lin.c.o CMakeFiles/untoast.dir/toast_ulaw.c.o CMakeFiles/untoast.dir/toast_alaw.c.o CMakeFiles/untoast.dir/toast_audio.c.o  -o bin/untoast  -lm libmb_gsm.a -lm 

@@ -1,1 +1,0 @@
-/opt/riscv/rv64g-linux/bin/riscv64-unknown-linux-gnu-gcc -O3 -static -DSMALL_DATASET -DDATA_TYPE_IS_INT -march=rv64g   CMakeFiles/gemver.dir/gemver.c.o CMakeFiles/gemver.dir/__/__/utilities/polybench.c.o  -o bin/gemver  -lm 
