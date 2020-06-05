@@ -326,9 +326,7 @@ def startsAllRunsSimRISCV(runsToDo):
 
 #########
 
-def startsAllRunsQemu(runsToDo, optLevels, configs, extra):
-	for oneConfig in configs:
-		for oneOpt in optLevels:
+def startsAllRunsQemu(runsToDo):
 			for (name, place, benchmark, args, inputs, outputs) in runsToDo:
 				runString = QEMU_LD + QEMU + " " + benchmark + " " + args
 				if inputs != "":
@@ -336,7 +334,8 @@ def startsAllRunsQemu(runsToDo, optLevels, configs, extra):
 				if outputs != "":
 					runString = runString + " > " + outputs
 
-
+				print("cd "+ place)
+				print(runString)
 				originalPlace = os.getcwd()
 				os.chdir(place)
 				startRun(runString, None, name + "_qemu")
@@ -360,7 +359,7 @@ def runDBTPerf(runsToDo):
 	if os.path.exists(resultFile):
 		return
 
-	startsAllRunsSimRISCV(runsToDo)
+	startsAllRunsQemu(runsToDo)
 
 	results[resultFile] = []
 	resultList = results	[resultFile]
@@ -416,9 +415,9 @@ if len(sys.argv) > 1:
 			else:
 				print("Unknown application '" + oneApp + "'. Ignoring it.")
 else:
-	runsToDo = scanPolybench(polybenchApps)
+	runsToDo = scanPolybench(polybenchApps) + scanMediabench(mediabenchApps)
 
-checkConfig()
+#checkConfig()
 
 runDBTPerf(runsToDo)
 #runDBTCM3(runsToDo)
